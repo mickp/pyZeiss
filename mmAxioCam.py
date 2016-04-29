@@ -7,7 +7,6 @@ BAUDRATE = '57600'
 AXIO = 'Axio'
 FOCUS = 'ZeissFocusAxis'
 
-
 # Load Micro Manager Core
 MMPATH = os.path.abspath("C:\Program Files\Micro-Manager-1.4")
 sys.path.append(MMPATH)
@@ -24,10 +23,3 @@ mmc.setProperty(AXIO, 'Port', COMPORT)
 
 # Add the Z drive.
 mmc.loadDevice(FOCUS, 'ZeissCAN29', 'ZeissFocusAxis')
-
-# Initialise devices.
-mmc.initializeAllDevices()
-
-# Set focus axis.
-mmc.setFocusDevice(FOCUS)
-
